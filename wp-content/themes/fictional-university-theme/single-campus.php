@@ -11,7 +11,7 @@ while(have_posts()) {
     <div class="container container--narrow page-section">
 
         <div class="metabox metabox--position-up metabox--with-home-link">
-            <p><a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('campus'); ?>">
+                <p><a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('campus'); ?>">
                     <i class="fa fa-home" aria-hidden="true"></i>All Campuses</a>
                 <span class="metabox__main"><?php the_title(); ?></span></p></php>
         </div>

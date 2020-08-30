@@ -1,8 +1,8 @@
 <?php
 get_header();
 pageBanner(array(
-    'title' => get_the_archive_title(),
-    'subtitle' => get_the_archive_description()
+    'title' => get_the_archive_title(),/*получает заголовок страницы категорий*/
+    'subtitle' => get_the_archive_description()/*получает описание для страниц архивов*/
 ));
 ?>
 
@@ -19,7 +19,7 @@ pageBanner(array(
                         ?></p>
                 </div>
                 <div class = "generic-content">
-                    <?php the_excerpt(); ?>
+                    <?php the_excerpt(); /*Выводит "отрывок" (по умолчанию 55 слов) поста*/ ?>
                     <p><a class="btn btn--blue" href="<?php the_permalink() ?>">Continue reading &raquo;</a></p>
                 </div>
             </div>

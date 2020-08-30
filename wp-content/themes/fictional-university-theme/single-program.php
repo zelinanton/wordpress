@@ -16,7 +16,7 @@ while(have_posts()) {
                 <span class="metabox__main"><?php the_title(); ?></span></p></php>
         </div>
 
-        <div class="generic-content"><?php the_content(); ?></div>
+        <div class="generic-content"><?php the_field('main_body_content'); ?></div>
 
         <?php
 
@@ -56,11 +56,11 @@ while(have_posts()) {
 
         $today = date('Ymd');
         $homepageEvents = new WP_Query(array(
-            'posts_per_page' => 2,
+            'posts_per_page' => 2,//количество получаемых записей
             'post_type' => 'event',
-            'meta_key' => 'event_date',
-            'orderby' => 'meta_value_num',
-            'order' => 'ASC',
+            'meta_key' => 'event_date',//Ключ(название) поля.
+            'orderby' => 'meta_value_num',//сортировки по полю (meta_value_num - ключ (для чисел))
+            'order' => 'ASC',//сортировка по порядку, от меньшего к большему
             'meta_query' => array(
                 array(
                     'key' => 'event_date',
@@ -72,7 +72,6 @@ while(have_posts()) {
                     'key' => 'related_programs',
                     'compare' => 'LIKE',
                     'value' => '"' . get_the_ID(). '"'
-
                 )
             )
         ));

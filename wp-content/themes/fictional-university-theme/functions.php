@@ -19,7 +19,9 @@ function pageBanner($args = NULL) {
     }
     if (!$args['photo']) {
         if (get_field('page_banner_background_image')) {
+            $field = get_field('page_banner_background_image');
             $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
+            $photo = get_field('page_banner_background_image')['sizes']['pageBanner'];
         } else {
             $args['photo'] = get_theme_file_uri('/images/ocean.jpg');
         }
@@ -101,3 +103,6 @@ function universityMapKey($api) {
 }
 
 add_filter('acf/fields/google_map/api', 'universityMapKey');
+/*add_filter( 'excerpt_length', function(){
+    return 20;
+} );*/

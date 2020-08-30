@@ -2,7 +2,7 @@
 get_header();
 pageBanner(array(
     'title' => 'Все События',
-    'subtitle' => 'See what is going on in our world.'
+    'subtitle' => 'Посмотрите, что происходит в нашем мире.'
 ));
 ?>
 

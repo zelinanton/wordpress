@@ -2,7 +2,7 @@
 get_header();
 pageBanner(array(
     'title' => 'Все Программы',
-    'subtitle' => 'There is something for everyone. Have a look around.'
+    'subtitle' => 'Здесь каждый найдет что-то для себя. Осмотрись.'
 ));
 ?>
 
