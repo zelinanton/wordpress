@@ -39,7 +39,6 @@ function pageBanner($args = NULL) {
 <?php
 }
 
-
 function university_files() {
     wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyDl6F_eQdHwFiwpj1tr-G_aPkN2L0LZ9tQ',
         NULL, '1.0', true);
@@ -55,8 +54,8 @@ function university_files() {
 
 add_action('wp_enqueue_scripts', 'university_files');
 
-function university_features(){
 
+function university_features(){
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_image_size('professorLandscape', 400, 260, true);
@@ -94,7 +93,6 @@ function university_adjust_queries($query) {
         ));
     }
 }
-
 add_action('pre_get_posts', 'university_adjust_queries');
 
 function universityMapKey($api) {
@@ -103,6 +101,3 @@ function universityMapKey($api) {
 }
 
 add_filter('acf/fields/google_map/api', 'universityMapKey');
-/*add_filter( 'excerpt_length', function(){
-    return 20;
-} );*/
